@@ -1,7 +1,29 @@
-body {
-  background: #D3D3D3;
-  color: #434343;
-  h1 {
-    color: #333333;
-  }
-}
+
+
+@import url(https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/1.12.3/semantic.min.css);
+@import url(https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/1.12.3/components/button.min.css);
+@import url(https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/1.12.3/components/checkbox.min.css);
+@import url(https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/1.12.3/components/divider.min.css);
+@import url(https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/1.12.3/components/dropdown.min.css);
+@import url(https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/1.12.3/components/form.min.css);
+@import url(https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/1.12.3/components/icon.min.css);
+@import url(https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/1.12.3/components/input.min.css);
+@import url(https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/1.12.3/components/list.min.css);
+@import url(https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/1.12.3/components/menu.min.css);
+
+@import url(https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/1.12.3/themes/default/assets/fonts/icons.eot);
+@import url(https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/1.12.3/themes/default/assets/fonts/icons.otf);
+@import url(https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/1.12.3/themes/default/assets/fonts/icons.svg);
+@import url(https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/1.12.3/themes/default/assets/fonts/icons.ttf);
+@import url(https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/1.12.3/themes/default/assets/fonts/icons.woff);
+@import url(https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/1.12.3/themes/default/assets/fonts/icons.woff2);
+
+@import url(http://fonts.googleapis.com/css?family=Bitter);
+@import url(http://fonts.googleapis.com/css?family=Nunito);
+
+@import "includes/global.scss";
+@import "includes/menu.scss";
+@import "includes/form.scss";
+
+
+

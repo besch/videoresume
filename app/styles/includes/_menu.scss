@@ -1,0 +1,19 @@
+
+ul#nav-menu {
+  margin: 0; 
+  padding: 20px;
+  
+  li {
+    display: inline-block;
+    // padding: 10px;
+    margin-right: 10px;
+    border-color: #CCCCCC;
+    border-radius: 4px;
+    border-style: solid;
+    
+    a {
+      padding: 10px;
+      display: block;
+    }
+  }
+}

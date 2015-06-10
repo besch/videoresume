@@ -1,0 +1,22 @@
+
+<button ng-click="addDummy1()">Add dummy video</button>
+<button ng-click="addDummy2()">Add dummy video</button>
+
+<hr />
+
+<ul ng-repeat="video in videos">
+  <li>
+    <div>
+      {{video.id}}
+      {{video.title}}
+      {{video.description}}
+      {{video.correlationId}}
+      {{video.createdAt}}
+    </div>
+    <div>
+      <a ng-click="deleteVideo(video.id)">Delete</a>
+      <a ng-click="editVideo(video.id)">Edit</a>
+    </div>
+  </li>
+</ul>
+

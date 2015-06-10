@@ -1,15 +1,23 @@
 <!doctype html>
-<html lang="en" ng-app="myApp">
+<html lang="en" ng-app="videoresume">
 <head>
-  <title>My awesome app</title>
-  <link rel="stylesheet" href="css/main.css" />
+  <title>VideoResume</title>
+  <link rel="stylesheet" type="text/css" href="css/main.css" />
 </head>
-<body ng-controller='WelcomeCtrl'>
+<body>
 
-  <h1>My awesome app</h1>
-
-  <p>{{testVar}}</p>
-
+  <ul id="nav-menu">
+      <li><a ui-sref="home">Home</a></li>
+      <li><a ui-sref="overview">Overview</a></li>
+      <!-- <li><a ui-sref="login">Login</a></li> -->
+      <!-- <li><a ui-sref="create-video-resume">Create VideoResume</a></li> -->
+      <li><a ui-sref="form">Create VideoResume</a></li>
+      <li><a ui-sref="video-management">Manage your VideoResume</a></li>
+  </ul>
+  
+  <div ui-view></div>
+  
+  
   <script src="/js/bundle.js"></script>
 
 </body>

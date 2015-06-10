@@ -1,0 +1,66 @@
+
+<div>
+  
+<!-- <div class="ui">
+  <p>Video category: <h4>{{videoCategory}}<h4></p>
+  <p>videoTitle: {{videoTitle}}</p>
+  <p>videoDescription: {{videoDescription}}</p>
+</div> -->
+
+<h2 class="ui header">
+  <img src="/images/icons/plugin.png">
+  <div class="content">
+    {{videoTitle}}
+    <div class="sub header">Title...</div>
+  </div>
+</h2>
+
+<h2 class="ui header">
+  <img src="/images/icons/plugin.png">
+  <div class="content">
+    {{videoDescription}}
+    <div class="sub header">Description...</div>
+  </div>
+</h2>
+
+<h2 class="ui header">
+  <i class="code icon"></i>
+  <div class="content">
+    {{videoCategory.name}}
+    <div class="sub header">Category...</div>
+  </div>
+</h2>
+  
+  <div class="ui input">
+    <input ng-model="videoTitle" placeholder="Title">
+  </div>
+  
+  <div class="ui input">
+    <input ng-model="videoDescription" placeholder="Description">
+  </div>
+
+  <select 
+    ng-model="videoCategory" 
+    ng-options="category.name for category in categories" class="ui dropdown">
+  </select>
+  
+  
+  
+  
+  
+  <!-- 
+  <div class="form-group">
+    <label for="title">Title</label>
+    <input class="form-control" name="title" ng-model="videoTitle">
+  </div>
+  
+  <div class="form-group">
+    <label for="description">Description</label>
+    <input class="form-control" name="description" ng-model="videoDescription">
+  </div>
+  
+  <div class="form-group">
+    <select ng-model="videoCategory" ng-options="category.name for category in categories"></select>
+  </div> -->
+  
+</div>

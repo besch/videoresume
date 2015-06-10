@@ -1,0 +1,215 @@
+
+/* form styling */
+#form-container                { 
+  background: #f06060; 
+  // margin-bottom:20px;
+  padding: 20px;
+  
+  & h2 {
+    font-size: 30px;
+    color: #fff;
+    padding: 0px;
+    border-bottom-color: #CCCCCC;
+    border-bottom-width: 2px;
+    border-radius: 0px;
+    font-weight: bold;
+    padding: 20px;
+  }
+}
+#form-container .page-header   { 
+  background:#151515; 
+  margin:0; 
+  padding:30px; 
+  border-top-left-radius:5px; 
+  border-top-right-radius:5px; 
+}
+
+/* numbered buttons */
+#status-buttons { 
+  margin: 20px;
+}
+#status-buttons a               { 
+  color: $global-background; 
+  display:inline-block; 
+  font-size:12px; 
+  margin-right:10px; 
+  text-align:center; 
+  text-transform:uppercase; 
+}
+#status-buttons a:hover         { 
+  text-decoration:none; 
+}
+
+/* we will style the span as the circled number */
+#status-buttons span { 
+  display:block; 
+  font-weight: bold;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  padding: 0;
+  background: rgba(171, 60, 60, 0.85);
+  color: #f06060;
+  font-size: 3.3em;
+  margin: 0 auto 20px auto;
+}
+
+/* active buttons turn light green-blue*/
+#status-buttons a.active span   { 
+  color: #fff;
+  background: rgba(171, 60, 60, 1);
+}
+
+
+
+
+
+/* style.css */
+/* ANIMATION STYLINGS
+============================================================================= */
+#signup-form            { 
+  position:relative; 
+  min-height:300px; 
+  overflow:hidden; 
+  padding:30px; 
+}
+#form-views             { 
+  width:auto; 
+}
+
+/* basic styling for entering and leaving */
+/* left and right added to ensure full width */
+#form-views.ng-enter,
+#form-views.ng-leave      { 
+  position:absolute; 
+  left:30px; 
+  right:30px;
+  transition:0.5s all ease; 
+  -moz-transition:0.5s all ease; 
+  -webkit-transition:0.5s all ease; 
+}
+    
+/* enter animation */
+#form-views.ng-enter            { 
+  -webkit-animation:slideInRight 0.5s both ease;
+  -moz-animation:slideInRight 0.5s both ease;
+  animation:slideInRight 0.5s both ease; 
+}
+
+/* leave animation */
+#form-views.ng-leave            { 
+  -webkit-animation:slideOutLeft 0.5s both ease;
+  -moz-animation:slideOutLeft 0.5s both ease;
+  animation:slideOutLeft 0.5s both ease; 
+}
+
+/* ANIMATIONS
+============================================================================= */
+/* slide out to the left */
+@keyframes slideOutLeft {
+    to      { transform: translateX(-200%); 
+}
+}
+@-moz-keyframes slideOutLeft {  
+    to      { -moz-transform: translateX(-200%); 
+}
+}
+@-webkit-keyframes slideOutLeft {
+    to      { -webkit-transform: translateX(-200%); 
+}
+}
+
+/* slide in from the right */
+@keyframes slideInRight {
+    from    { transform:translateX(200%); 
+}
+    to      { transform: translateX(0); 
+}
+}
+@-moz-keyframes slideInRight {
+    from    { -moz-transform:translateX(200%); 
+}
+    to      { -moz-transform: translateX(0); 
+}
+}
+@-webkit-keyframes slideInRight {
+    from    { -webkit-transform:translateX(200%); 
+}
+    to      { -webkit-transform: translateX(0); 
+}
+}
+
+
+
+
+
+#vresume-record-video-form {
+  
+  box-sizing: border-box;
+  border-width: 2px;
+  border-color: #CCCCCC;
+  border-radius: 4px;
+  border-style: solid;
+  // color: #222222;
+  font-size: 12px;
+  margin: 0px;
+  background-color: #FFFFFF;
+  padding: 20px;
+  min-height: 300px; // needed for animation, change view
+  max-width: 545px;
+
+  & h2 {
+    font-size: 30px;
+    color: #607A75;
+    padding: 0px;
+    margin: 0px;
+    margin-bottom: 10px;
+    // border-bottom-style: dotted;
+    border-bottom-color: #CCCCCC;
+    border-bottom-width: 2px;
+    border-radius: 0px;
+    font-weight: bold;
+   }
+
+  & input[type="text"],
+  & select {
+    color: #A9A9A9;
+    padding: 10px;
+    border: solid 5px $global-border-color;
+    -webkit-transition: border 0.3s;
+    -moz-transition: border 0.3s;
+    -o-transition: border 0.3s;
+    transition: border 0.3s;
+    display: block;
+    margin: 10px 0;
+    width: 100%;
+    font-size: 18px;
+    -webkit-appearance: none;
+    outline: none;
+    box-sizing: border-box;
+    background: $global-background;
+  }
+
+  & input:focus,
+  & select:focus {
+    color: $global-color;
+    border: solid 5px $global-border-focus-color;
+  }
+  
+  & select {
+    height: 50px;
+  }
+  
+  & section {
+    margin-bottom: 10px;
+    padding: 30px;
+    // background-color: #efefef;
+  }
+
+  & section.section-helper {
+    border: 1px solid $global-border-focus-color;
+    margin-bottom: 30px;
+    padding: 30px;
+    background-color: $global-background;
+  }
+}

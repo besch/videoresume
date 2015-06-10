@@ -1,0 +1,22 @@
+<div>
+
+    <div id="form-container">
+
+        <div class="">
+            <h2 class="form-header">Create VideoResume</h2>
+            
+            <div id="status-buttons" class="text-center">
+                <a ui-sref-active="active" ui-sref=".step1"><span>1</span> Provide description</a>
+                <a ui-sref-active="active" ui-sref=".step2"><span>2</span> Record VideoResume</a>
+                <a ui-sref-active="active" ui-sref=".step3"><span>2</span> Share Your VideoResume</a>
+            </div>
+        </div>
+        
+        <form id="vresume-record-video-form" ng-submit="processForm()">
+
+            <div id="form-views" ui-view></div>
+        </form>
+
+    </div>
+
+</div>
