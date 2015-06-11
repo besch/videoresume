@@ -1,15 +1,12 @@
 'use strict';
 
-  module.exports = function($scope) {
+module.exports = ['$scope', 'GAuth', '$state', 'GApi', 'GData', 'AuthHelpers', 
+  function ($scope, GAuth, $state, GApi, GData, AuthHelpers) {
 
-  /** 
-   * @ngdoc controller
-   * @name videoresume.controller:MainController
-   * @description 
-   * Overview
-   */
+  $scope.isLogin = function () {
+    console.log('AuthHelpers.isLogin();', AuthHelpers.isLogin())
+    return AuthHelpers.isLogin();
+  };
   
   
-  
-          
-} 
+}];

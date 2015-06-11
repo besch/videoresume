@@ -4,7 +4,6 @@ module.exports = ['$scope', '$state', 'AuthHelpers', function ($scope, $state, A
 
   $scope.doSingup = function() {
     if(!AuthHelpers.isLogin()) {
-      console.log('bla');
       AuthHelpers.login();
     }
   };

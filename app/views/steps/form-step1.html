@@ -1,66 +1,53 @@
 
 <div>
   
-<!-- <div class="ui">
-  <p>Video category: <h4>{{videoCategory}}<h4></p>
-  <p>videoTitle: {{videoTitle}}</p>
-  <p>videoDescription: {{videoDescription}}</p>
-</div> -->
+  <section class="section-helper ng-scope">
+    <h2 class="ui header">
+      <i class="pencil blue icon"></i>
+      <div class="content ng-binding">
+        {{videoTitle}}
+        <div class="sub header">Title serves as note or information of a video content you recording. Please be descriptive as possible.</div>
+      </div>
+    </h2>
 
-<h2 class="ui header">
-  <img src="/images/icons/plugin.png">
-  <div class="content">
-    {{videoTitle}}
-    <div class="sub header">Title...</div>
-  </div>
-</h2>
+    <h2 class="ui header">
+      <i class="comment blue icon"></i>
+      <div class="content ng-binding">
+        {{videoDescription}}
+        <div class="sub header">Description usually contains keywords which helps improve visibility in search results.</div>
+      </div>
+    </h2>
 
-<h2 class="ui header">
-  <img src="/images/icons/plugin.png">
-  <div class="content">
-    {{videoDescription}}
-    <div class="sub header">Description...</div>
+    <h2 class="ui header">
+      <i class="unordered list blue icon"></i>
+      <div class="content ng-binding">
+        {{videoCategory}}
+        <div class="sub header">Please choose one of the categories which describe Your video content best.</div>
+      </div>
+    </h2>
+    
+  </section>
+  
+  <section>
+    <h2>Please fill required fields</h2>
+    <input type="text" ng-model="videoTitle" placeholder="VideoResume Title">
+    <input type="text" ng-model="videoDescription" placeholder="VideoResume Description">
+    <select class="ui dropdown"
+      ng-model="videoCategory" 
+      ng-options="category.name as category.name for category in categories" class="ui dropdown">
+      <option value="">Select category</option>
+      <i class="sort descending blue icon"></i>
+    </select>
+  </section>
+  
+  <div class="perspective">
+    <button class="btn-next" ng-click="submitStep1()">Record video</button>
   </div>
-</h2>
 
-<h2 class="ui header">
-  <i class="code icon"></i>
-  <div class="content">
-    {{videoCategory.name}}
-    <div class="sub header">Category...</div>
-  </div>
-</h2>
-  
-  <div class="ui input">
-    <input ng-model="videoTitle" placeholder="Title">
-  </div>
-  
-  <div class="ui input">
-    <input ng-model="videoDescription" placeholder="Description">
-  </div>
-
-  <select 
-    ng-model="videoCategory" 
-    ng-options="category.name for category in categories" class="ui dropdown">
-  </select>
-  
-  
-  
-  
-  
-  <!-- 
-  <div class="form-group">
-    <label for="title">Title</label>
-    <input class="form-control" name="title" ng-model="videoTitle">
-  </div>
-  
-  <div class="form-group">
-    <label for="description">Description</label>
-    <input class="form-control" name="description" ng-model="videoDescription">
-  </div>
-  
-  <div class="form-group">
-    <select ng-model="videoCategory" ng-options="category.name for category in categories"></select>
-  </div> -->
   
 </div>
+
+
+
+
+

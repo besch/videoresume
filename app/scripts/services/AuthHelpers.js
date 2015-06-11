@@ -14,7 +14,8 @@ module.exports = ['GData', 'GAuth', '$rootScope', '$state', 'constants', '$windo
   
   var isLogin = function () {
     // console.log('is login? ', GData.isLogin())
-    return GData.isLogin();
+    // return GData.isLogin();
+    return console.log($rootScope.user && $rootScope.userRef);
   }
   
   var logout = function () {
@@ -32,16 +33,20 @@ module.exports = ['GData', 'GAuth', '$rootScope', '$state', 'constants', '$windo
     
     if(isLogin()) return;
 
-    GAuth.login().then(function(){
+    GAuth.login()
+    .then(function(){
       
       getUser();
       buildUserUrl();
       console.log('You are logged in as ', $rootScope.user.name );
-      // console.log('user', $rootScope.user);
     }, function() {
       console.log('Login failure')
       // return state.go('login');
-    });
+    })
+    .then(function() {
+      console.log('fire')
+      $state.go('home');
+    })
   };
   
   return {

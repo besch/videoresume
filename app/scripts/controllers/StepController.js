@@ -1,6 +1,6 @@
 
-module.exports = ['$scope', '$rootScope', 
-  function ($scope, $rootScope) {
+module.exports = ['$scope', '$rootScope', '$state',
+  function ($scope, $rootScope, $state) {
   
   $scope.videoTitle = '';
   $scope.videoDescription = '';
@@ -32,5 +32,15 @@ module.exports = ['$scope', '$rootScope',
       $rootScope.videoCategory = n;
     }
   });
+  
+  $scope.submitStep1 = function() {
+    console.log($scope.videoTitle, $scope.videoDescription, $scope.videoCategory)
+    if($scope.videoTitle && $scope.videoDescription && $scope.videoCategory) {
+      $state.go('form.step3');
+      // validation
+    }
+  };
+  
+  
   
 }];

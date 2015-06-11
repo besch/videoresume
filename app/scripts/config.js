@@ -34,26 +34,25 @@ module.exports = ['$stateProvider', '$urlRouterProvider', '$locationProvider',
         .state('form.step1', {
             url: '/step1',
             templateUrl: '/views/steps/form-step1.html',
-            // controller: 'StepController'
+            controller: 'StepController'
         })
         
         .state('form.step2', {
             url: '/step2',
             templateUrl: '/views/steps/form-step2.html',
-            // controller: 'StepController'
+            controller: 'StepController'
         })
         
         .state('form.step3', {
             url: '/step3',
             templateUrl: '/views/steps/form-step3.html',
-            // controller: 'StepController'
+            controller: 'StepController'
         })
         
     .state('home', {
       url: '/home',
       templateUrl: '/views/home.html',
-      controller: function () {}
-      // controller: 'MainController'
+      controller: 'HomeController'
     })
     
     .state('video-management', {

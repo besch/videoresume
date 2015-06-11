@@ -7,7 +7,6 @@
   -webkit-perspective: 800px;
   -moz-perspective: 800px;
   perspective: 800px;
-  display: inline-block;
 }
 
 .btn-next {
@@ -19,7 +18,8 @@
   cursor: pointer;
   padding: 25px 80px;
   display: inline-block;
-  margin: 15px 30px;
+  // margin: 15px 30px;
+  margin: 0 auto;
   text-transform: uppercase;
   letter-spacing: 1px;
   font-weight: 700;
