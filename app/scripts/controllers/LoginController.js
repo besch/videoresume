@@ -1,15 +1,12 @@
 'use strict';
 
-module.exports = ['$scope', 'GAuth', '$state', 'GApi', function ($scope, GAuth, $state, GApi) {
-
-  console.log(GApi)
+module.exports = ['$scope', '$state', 'AuthHelpers', function ($scope, $state, AuthHelpers) {
 
   $scope.doSingup = function() {
-    GAuth.login().then(function(){
-      console.log('Login success')
-    }, function() {
-      console.log('Login failure')
-    });
+    if(!AuthHelpers.isLogin()) {
+      console.log('bla');
+      AuthHelpers.login();
+    }
   };
   
   

@@ -40,6 +40,7 @@ app.service('UserService', require('./services/UserService'));
 app.service('VideoService', require('./services/VideoService'));
 app.service('YoutubeService', require('./services/YoutubeService'));
 
+app.controller('HomeController', require('./controllers/HomeController'));
 app.controller('OverviewController', require('./controllers/OverviewController'));
 app.controller('LoginController', require('./controllers/LoginController'));
 app.controller('StepController', require('./controllers/StepController'));
