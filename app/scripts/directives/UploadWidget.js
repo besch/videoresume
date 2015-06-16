@@ -1,9 +1,13 @@
 
-module.exports = ['$window', 'GApi', '$rootScope', 'VideoService', 'constants', 
-  function ($window, GApi, $rootScope, VideoService, constants) {
+module.exports = ['$window', 'GApi', '$rootScope', 'VideoService', 'constants', 'toaster',
+  function ($window, GApi, $rootScope, VideoService, constants, toaster) {
   
   return {
     restrict: 'EA',
+    // template: '<i class="loading icon" ng-show="processing"></i>' +
+    //             '<div class="perspective">' +
+    //             '<butpton ng-hide="processing" class="btn-next" ng-click="submitStep3()">Share video</button>' +
+    //           '</div>',
     template: '<div></div>',
     // scope: true,
     // bindToController: {
@@ -29,7 +33,10 @@ module.exports = ['$window', 'GApi', '$rootScope', 'VideoService', 'constants',
           title,
           description,
           category,
-          privacy = constants.youtube.privacy
+          privacy = constants.youtube.privacy;
+          
+      $rootScope.processingVideo = false;
+      $rootScope.processingVideoComplete = false;
             
       // onStateChange
       // YT.UploadWidgetState.IDLE
@@ -54,7 +61,7 @@ module.exports = ['$window', 'GApi', '$rootScope', 'VideoService', 'constants',
       
       function onApiReady () {
         
-        console.log($rootScope);
+        // console.log($rootScope);
         
         title       = '(' + $rootScope.videoCategory + ') ' + $rootScope.videoTitle || '';
         description = $rootScope.videoDescription || '';
@@ -70,19 +77,24 @@ module.exports = ['$window', 'GApi', '$rootScope', 'VideoService', 'constants',
       function onUploadSuccess(event) {
         // console.log('Video ID ' + event.data.videoId + ' was uploaded and is currently being processed.');
         // console.log('video props', event.data)
+        // 
         VideoService.addVideo(event.data.videoId, event.data.correlationId, title, description, category);
+        $rootScope.processingVideo = true;
       };
 
       // 5. This function is called when a video has been successfully processed.
       function onProcessingComplete(event) {
-        
-        
+        $rootScope.processingVideo = false;
+        $rootScope.processingVideoComplete = true;
+                
         player = new YT.Player('player', {
           height: 390,
-          width: 640,
+          width: 500,
           videoId: event.data.videoId,
           events: {}
         });
+        
+        scope.$apply();
         
         // GApi.executeAuth('youtube', 'playlistItems.insert', {
         //   part: 'snippet',

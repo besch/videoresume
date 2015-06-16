@@ -1,0 +1,39 @@
+
+.share-buttons {
+  list-style: none;
+  color: #009fda;
+  padding: 0;
+  
+  &:hover {
+    color: #009FDA;
+  }
+  
+  li {
+    width: 60px;
+    display: inline-block;
+    margin: 30px;
+    
+    .icon {
+      font-size: 5em;
+    }
+  }
+}
+
+.share-email {
+  
+  .icon {
+    font-size: 5em;
+    color: #009fda;
+    cursor: pointer;
+    
+    &:hover {
+      color: #00b2f3;
+    }
+  }
+  
+  .share-email-send {
+    display: inline-block;
+    height: 70px;
+    vertical-align: middle;
+  }
+}

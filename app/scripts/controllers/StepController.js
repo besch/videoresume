@@ -1,6 +1,6 @@
 
-module.exports = ['$scope', '$rootScope', '$state',
-  function ($scope, $rootScope, $state) {
+module.exports = ['$scope', '$rootScope', '$state', 'toaster',
+  function ($scope, $rootScope, $state, toaster) {
   
   $scope.videoTitle = '';
   $scope.videoDescription = '';
@@ -33,14 +33,35 @@ module.exports = ['$scope', '$rootScope', '$state',
     }
   });
   
-  $scope.submitStep1 = function() {
-    console.log($scope.videoTitle, $scope.videoDescription, $scope.videoCategory)
+  $scope.goStep2 = function() {
+    // console.log($scope.videoTitle, $scope.videoDescription, $scope.videoCategory)
     if($scope.videoTitle && $scope.videoDescription && $scope.videoCategory) {
-      $state.go('form.step3');
+      $state.go('form.step2');
       // validation
     }
   };
   
+  $scope.goStep3 = function() {
+    $state.go('form.step3');
+  };
   
+  $scope.$watch(function () {
+    return $rootScope.processingVideo;
+  }, function (n, o) {
+    console.log('new val processingVideo', n);
+    if (n && n != o) { 
+      $scope.processingVideo = n;
+      toaster.pop('warning', "Processing", 'Video processing... I can take a few moments', 5000, 'trustedHtml');
+    }
+  });
+  
+  $scope.$watch(function () {
+    return $rootScope.processingVideoComplete;
+  }, function (n, o) {
+    if (n && n != o) { 
+      $scope.processingVideoComplete = n; 
+      toaster.pop('success', "Success", 'Video has been successfully uploaded on Youtube', 5000, 'trustedHtml');
+    }
+  });
   
 }];

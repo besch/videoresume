@@ -1,8 +1,21 @@
+<div class="video-processing">
 
-<h1>Creating video resume</h1>
+  <!-- <h2>Follow through steps inside window located below.</h2> -->
 
-<div id="widget"></div>
-<div id="player"></div>
+  <div id="widget"></div>
+  <div id="player"></div>
 
-<!-- <div upload-widget title="{{videoTitle}}" description="{{videoDescription}}"></div> -->
-<div upload-widget title="videoTitle" description="videoDescription"></div>
+  <!-- <div upload-widget title="{{videoTitle}}" description="{{videoDescription}}"></div> -->
+  <div upload-widget></div>
+
+
+  <div class="perspective" ng-show="processingVideoComplete">
+    <butpton class="btn-next" ng-click="goStep3()">Share video</button>
+  </div>
+
+<!--   <div ng-show="processingVideo && processingVideoComplete">
+    <span>Processing video, please do not leave this page.</span>
+    <div class="spinner"></div>
+  </div> -->
+  
+</div>

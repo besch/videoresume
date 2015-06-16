@@ -1,10 +1,11 @@
 
 /* form styling */
-#form-container                { 
-  background: #f06060; 
-  // margin-bottom:20px;
+#form-container          { 
+  // background-color: #84d54a; 
   padding: 20px;
-  
+  margin: 0 auto;
+  width: 65%;
+    
   & h2 {
     font-size: 30px;
     color: #fff;
@@ -14,6 +15,14 @@
     border-radius: 0px;
     font-weight: bold;
     padding: 20px;
+  }
+  
+  .form-container-content {
+    margin: 0 auto;
+    // background-color: #84d54a; 
+    background-color: rgba(243,124,81,0.85);
+    // width: 80%;
+    width: 68%;
   }
 }
 #form-container .page-header   { 
@@ -25,8 +34,11 @@
 }
 
 /* numbered buttons */
-#status-buttons { 
-  margin: 20px;
+#status-buttons {
+  margin: 20px 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
 }
 #status-buttons a               { 
   color: $global-background; 
@@ -48,16 +60,20 @@
   width: 50px;
   height: 50px;
   padding: 0;
-  background: rgba(171, 60, 60, 0.85);
-  color: #f06060;
+  // background: rgba(171, 60, 60, 0.85);
+  // color: #f06060;
   font-size: 3.3em;
   margin: 0 auto 20px auto;
+  color: #fff;
+  // background-color: #008a32;
+  background-color: rgba(211, 115, 81, 1);
 }
 
 /* active buttons turn light green-blue*/
 #status-buttons a.active span   { 
   color: #fff;
-  background: rgba(171, 60, 60, 1);
+  // background: rgba(171, 60, 60, 1);
+  background-color: rgba(211, 115, 81, 1);
 }
 
 
@@ -74,7 +90,8 @@
   padding:30px; 
 }
 #form-views             { 
-  width:auto; 
+  // width:auto; 
+  // width: 500px;
 }
 
 /* basic styling for entering and leaving */
@@ -107,33 +124,33 @@
 ============================================================================= */
 /* slide out to the left */
 @keyframes slideOutLeft {
-    to      { transform: translateX(-200%); 
+    to      { transform: translateX(-300%); 
 }
 }
 @-moz-keyframes slideOutLeft {  
-    to      { -moz-transform: translateX(-200%); 
+    to      { -moz-transform: translateX(-300%); 
 }
 }
 @-webkit-keyframes slideOutLeft {
-    to      { -webkit-transform: translateX(-200%); 
+    to      { -webkit-transform: translateX(-300%); 
 }
 }
 
 /* slide in from the right */
 @keyframes slideInRight {
-    from    { transform:translateX(200%); 
+    from    { transform:translateX(300%); 
 }
     to      { transform: translateX(0); 
 }
 }
 @-moz-keyframes slideInRight {
-    from    { -moz-transform:translateX(200%); 
+    from    { -moz-transform:translateX(300%); 
 }
     to      { -moz-transform: translateX(0); 
 }
 }
 @-webkit-keyframes slideInRight {
-    from    { -webkit-transform:translateX(200%); 
+    from    { -webkit-transform:translateX(300%); 
 }
     to      { -webkit-transform: translateX(0); 
 }
@@ -156,7 +173,8 @@
   background-color: #FFFFFF;
   padding: 20px;
   min-height: 300px; // needed for animation, change view
-  max-width: 545px;
+  // max-width: 545px;
+  width: 100%;
 
   & h2 {
     font-size: 30px;
@@ -207,7 +225,7 @@
   }
 
   & section.section-helper {
-    border: 1px solid $global-border-focus-color;
+    // border: 1px solid $global-border-focus-color;
     margin-bottom: 30px;
     padding: 30px;
     background-color: $global-background;

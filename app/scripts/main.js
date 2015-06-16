@@ -16,16 +16,18 @@ require('./lib/angular-google-gapi.js');
 // require('./lib/angular-youtube-embed.js');
 require('./lib/firebase.js');
 require('./lib/angularfire.min.js');
+require('angularjs-toaster');
 
 var app = angular.module('videoresume', [
   'firebase', 
   'angular-google-gapi', 
   // 'youtube-embed', 
+  // 'angularify.semantic.dropdown'
   'ngRoute', 
   'ngAnimate', 
   'ui.router',
   'ui.bootstrap',
-  // 'angularify.semantic.dropdown'
+  'toaster'
 ]);
 
 app.constant('constants', require('./constants.js'));

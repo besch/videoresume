@@ -1,10 +1,15 @@
 
+<!--   <i class="loading icon orange"></i>
+<div class="video-processing-loader">
+  <span>Processing video, please do not leave this page.</span>
+</div> -->
+
 <div>
   
-  <section class="section-helper ng-scope">
+  <section class="section-helper">
     <h2 class="ui header">
       <i class="pencil blue icon"></i>
-      <div class="content ng-binding">
+      <div class="content">
         {{videoTitle}}
         <div class="sub header">Title serves as note or information of a video content you recording. Please be descriptive as possible.</div>
       </div>
@@ -12,7 +17,7 @@
 
     <h2 class="ui header">
       <i class="comment blue icon"></i>
-      <div class="content ng-binding">
+      <div class="content">
         {{videoDescription}}
         <div class="sub header">Description usually contains keywords which helps improve visibility in search results.</div>
       </div>
@@ -20,7 +25,7 @@
 
     <h2 class="ui header">
       <i class="unordered list blue icon"></i>
-      <div class="content ng-binding">
+      <div class="content">
         {{videoCategory}}
         <div class="sub header">Please choose one of the categories which describe Your video content best.</div>
       </div>
@@ -41,7 +46,7 @@
   </section>
   
   <div class="perspective">
-    <button class="btn-next" ng-click="submitStep1()">Record video</button>
+    <button class="btn-next" ng-click="goStep2()">Record VideoResume</button>
   </div>
 
   

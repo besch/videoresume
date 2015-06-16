@@ -1,5 +1,5 @@
 
-
+// TODO (choose one or couple of those)
 @import url(https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/1.12.3/semantic.min.css);
 @import url(https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/1.12.3/components/button.min.css);
 @import url(https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/1.12.3/components/checkbox.min.css);
@@ -10,6 +10,7 @@
 @import url(https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/1.12.3/components/input.min.css);
 @import url(https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/1.12.3/components/list.min.css);
 @import url(https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/1.12.3/components/menu.min.css);
+@import url(https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/1.12.3/components/loader.min.css);
 
 @import url(https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/1.12.3/themes/default/assets/fonts/icons.eot);
 @import url(https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/1.12.3/themes/default/assets/fonts/icons.otf);
@@ -17,14 +18,24 @@
 @import url(https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/1.12.3/themes/default/assets/fonts/icons.ttf);
 @import url(https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/1.12.3/themes/default/assets/fonts/icons.woff);
 @import url(https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/1.12.3/themes/default/assets/fonts/icons.woff2);
+// TODO (choose one or couple of those)
 
+// TOASTR
+@import url(https://cdnjs.cloudflare.com/ajax/libs/angularjs-toaster/0.4.14/toaster.min.css);
+
+// FONTS
 @import url(http://fonts.googleapis.com/css?family=Bitter);
 @import url(http://fonts.googleapis.com/css?family=Nunito);
 
-@import "includes/global.scss";
-@import "includes/menu.scss";
-@import "includes/form.scss";
-@import "includes/btn-next.scss";
+// SCSS
+@import "includes/global";
+@import "includes/menu";
+@import "includes/form";
+@import "includes/btn-next";
+@import "includes/share-buttons";
+@import "includes/form-input";
+@import "includes/video-processing";
+@import "includes/spinner";
 
 
 
