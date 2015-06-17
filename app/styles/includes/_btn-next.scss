@@ -7,7 +7,9 @@
   -webkit-perspective: 800px;
   -moz-perspective: 800px;
   perspective: 800px;
-  width: 280px;
+  // width: 280px;
+  display: inline-block;
+  width: 100%;
 }
 
 .btn-next {
@@ -17,7 +19,8 @@
   color: #fff;
   background: none;
   cursor: pointer;
-  padding: 25px 80px;
+  // padding: 25px 80px;
+  padding: 15px 40px;
   display: inline-block;
   // margin: 15px 30px;
   margin: 0 auto;

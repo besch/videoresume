@@ -27,7 +27,7 @@ server.all('/*', function(req, res) {
 });
 
 // Dev task
-gulp.task('dev', ['clean', 'views', 'styles', 'lint', 'browserify'], function() { });
+gulp.task('dev', ['clean', 'views', 'styles', 'img', 'lint', 'browserify'], function() { });
 
 // Clean task
 gulp.task('clean', function() {
@@ -51,6 +51,11 @@ gulp.task('styles', function() {
   .pipe(autoprefixer('last 2 versions', '> 1%', 'ie 8'))
   // These last two should look familiar now :)
   .pipe(gulp.dest('dist/css/'));
+});
+
+gulp.task('img', function () {
+  gulp.src('app/images/*.*')
+  .pipe(gulp.dest('dist/images/'));
 });
 
 // Browserify task
@@ -94,6 +99,10 @@ gulp.task('watch', ['lint'], function() {
   // Watch our sass files
   gulp.watch(['app/styles/**/*.scss'], [
     'styles'
+  ]);
+  
+  gulp.watch(['app/images/**/*.*'], [
+    'img'
   ]);
 
   gulp.watch(['app/**/*.html'], [

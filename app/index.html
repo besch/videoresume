@@ -5,18 +5,42 @@
   <link rel="stylesheet" type="text/css" href="css/main.css" />
 </head>
 <body>
-
-  <ul id="nav-menu">
-      <li><a ui-sref="home">Home</a></li>
-      <li><a ui-sref="overview">Overview</a></li>
-      <!-- <li><a ui-sref="login">Login</a></li> -->
-      <!-- <li><a ui-sref="create-video-resume">Create VideoResume</a></li> -->
-      <li><a ui-sref="form">Create VideoResume</a></li>
-      <li><a ui-sref="video-management">Manage your VideoResume</a></li>
-  </ul>
   
-  <div ui-view></div>
+  <nav id="navigation">
+    <a 
+      ui-sref="home">
+      <i class="home icon nav-icons"></i>
+      Home
+    </a>
+    
+    <!-- <a ui-sref="#">Jobs</a> -->
+    <!-- <a ui-sref="#">Companies</a> -->
+    
+    <a 
+      ui-sref="form.step1">
+      <i class="video icon nav-icons"></i>
+      Video manager
+    </a>
+    
+    <a 
+      style="float: right;" 
+      ui-sref="login">
+      <i class="user icon nav-icons"></i>
+      Account
+    </a>
+    
+  </nav>
   
+  <div class="view-container" ui-view></div>
+  
+  <footer>
+      <ul>
+          <li class="footer-links"><a href="#">WorkFain</a></li>
+          <li class="footer-links"><a href="#">About</a></li>
+          <li class="footer-links"><a href="#">Contact</a></li>
+      </ul>
+      <hr />
+  </footer>
   
   <script src="/js/bundle.js"></script>
 

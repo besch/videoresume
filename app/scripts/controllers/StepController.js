@@ -48,7 +48,7 @@ module.exports = ['$scope', '$rootScope', '$state', 'toaster',
   $scope.$watch(function () {
     return $rootScope.processingVideo;
   }, function (n, o) {
-    console.log('new val processingVideo', n);
+    // console.log('new val processingVideo', n);
     if (n && n != o) { 
       $scope.processingVideo = n;
       toaster.pop('warning', "Processing", 'Video processing... I can take a few moments', 5000, 'trustedHtml');

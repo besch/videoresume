@@ -4,36 +4,67 @@
 <ul class="share-buttons">
 
     <li>
-        <a href="">
+        <a 
+          href="https://www.linkedin.com/grp/home?gid=8324381" 
+          target="_blank">
+            <i class="linkedin plus icon"></i>
+        </a>
+    </li>
+
+    <li>
+        <a 
+          href="https://plus.google.com/u/0/communities/102553746950584305586" 
+          target="_blank">
             <i class="google plus icon"></i>
+            <!-- <g:plusone size="tall"></g:plusone> -->
         </a>
     </li>
     
     <li>
-        <a href="">
+<!--         <a 
+        data-href="https://developers.facebook.com/workfain" 
+        data-layout="standard" 
+        data-action="like" 
+        data-show-faces="false" 
+        data-share="true" 
+        target="_blank">
+            <i class="facebook plus icon"></i>
+        </a> -->
+        <a 
+        href="https://www.facebook.com/workfain?fref=ts"
+        target="_blank">
             <i class="facebook plus icon"></i>
         </a>
     </li>
     
     <li>
-        <a href="">
+        <a 
+        href="https://twitter.com/workfain" 
+        target="_blank" 
+        data-show-count="false">
             <i class="twitter plus icon"></i>
         </a>
     </li>
     
-    <li>
+<!--     <li>
         <a href="">
             <i class="youtube plus icon"></i>
         </a>
-    </li>
+    </li> -->
 </ul>
 
 <div class="share-email">
 
-  <input class="form-input" />
+  <input class="form-input" ng-model="email" />
   
-  <span class="share-email-send" ng-click="">
+<!--   <span class="share-email-send" ng-click="">
     <i class="mail outline icon"></i>
-  </span>
+  </span> -->
+  
+  <a 
+    class="share-email-send"
+    href="mailto:{{email}}?subject=Workfain&body=Message">
+    <i class="mail outline icon"></i>
+  </a>
   
 </div>

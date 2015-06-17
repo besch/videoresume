@@ -18,6 +18,10 @@ require('./lib/firebase.js');
 require('./lib/angularfire.min.js');
 require('angularjs-toaster');
 
+// SOCIAL BUTTONS
+require('./social/twitter.js');
+require('./social/fb.js');
+
 var app = angular.module('videoresume', [
   'firebase', 
   'angular-google-gapi', 
