@@ -77,15 +77,16 @@ module.exports = ['$window', 'GApi', '$rootScope', 'VideoService', 'constants', 
       function onUploadSuccess(event) {
         // console.log('Video ID ' + event.data.videoId + ' was uploaded and is currently being processed.');
         // console.log('video props', event.data)
+        // console.log('upload success')
 
-        $rootScope.processingVideo = true;
         VideoService.addVideo(event.data.videoId, event.data.correlationId, title, description, category);
+        $rootScope.processingVideo = true;
+        
+        scope.$apply();
       };
 
       // 5. This function is called when a video has been successfully processed.
       function onProcessingComplete(event) {
-        $rootScope.processingVideo = false;
-        $rootScope.processingVideoComplete = true;
                 
         player = new YT.Player('player', {
           height: 390,
@@ -94,6 +95,9 @@ module.exports = ['$window', 'GApi', '$rootScope', 'VideoService', 'constants', 
           events: {}
         });
         
+        $rootScope.processingVideo = false;
+        $rootScope.processingVideoComplete = true;
+
         scope.$apply();
         
         // GApi.executeAuth('youtube', 'playlistItems.insert', {

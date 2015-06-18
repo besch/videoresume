@@ -1,6 +1,6 @@
 'use strict';
 
-module.exports = ['GAuth', 'GApi', 'GData', '$state', 'AuthHelpers', '$rootScope', '$q', 
+module.exports = ['GAuth', 'GApi', 'GData', '$state', 'AuthHelpers', '$rootScope', '$q',
     function(GAuth, GApi, GData, $state, AuthHelpers, $rootScope, $q) {
 
       var CLIENT = '816450907263-etvolk1rdhu8l60os66d5p2cppq1ffj3.apps.googleusercontent.com';
@@ -28,8 +28,9 @@ module.exports = ['GAuth', 'GApi', 'GData', '$state', 'AuthHelpers', '$rootScope
       // });
       
       $rootScope.$on('$stateChangeStart', function(event, toState, toParams, fromState, fromParams){
+        // console.log('storage', $sessionStorage.userRef)
+        // if (!$rootScope.user || !$rootScope.userRef || !$sessionStorage.userRef) {
         if (!$rootScope.user || !$rootScope.userRef) {
-          // console.error(GData.isLogin(), $rootScope.user, $rootScope.userRef)
           setTimeout(function() {
             $state.go('login');
           }, 1);

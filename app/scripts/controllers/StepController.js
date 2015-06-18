@@ -37,20 +37,23 @@ module.exports = ['$scope', '$rootScope', '$state', 'toaster',
     return $rootScope.processingVideo;
   }, function (n, o) {
     // console.log('new val processingVideo', n);
-    if (n && n != o) { 
-      console.log('processingVideo', n)
-
+    if (n != o) {
       $scope.processingVideo = n;
-      toaster.pop('warning', "Processing", 'Video processing... I can take a few moments', 5000, 'trustedHtml');
-    }
+      
+      if(n) {
+        angular.element('#widget').css('visibility', 'hidden'); // hide untill upload to youtube is done
+        toaster.pop('warning', "Processing", 'Video processing... I can take a few moments', 5000, 'trustedHtml');
+      }
+    }    
   });
   
   $scope.$watch(function () {
     return $rootScope.processingVideoComplete;
   }, function (n, o) {
     if (n && n != o) {
-      console.log('processingVideoComplete', n)
+      // console.log('processingVideoComplete', n)
 
+      angular.element('#widget').remove();
       $scope.processingVideoComplete = n; 
       toaster.pop('success', "Success", 'Video has been successfully uploaded on Youtube', 5000, 'trustedHtml');
     }

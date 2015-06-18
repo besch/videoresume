@@ -7,7 +7,7 @@
   <div ng-show="processingVideo">
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
       <g class="anim-0">
-        <circle cx="50" cy="50" r="50" fill="#ff5e7C" />
+        <circle cx="50" cy="50" r="50" fill="rgba(243, 124, 81, 0.85)" />
       </g>
       <g class="anim-1">
         <circle cx="50" cy="50" r="5" fill="white" />
@@ -26,6 +26,7 @@
         <line x1="75" y1="25" x2="25" y2="25" stroke="white" stroke-width="3" />
       </g>
     </svg>
+    <h2>Uploading VideoResume to Youtube. It may take a few monents...</h2>
   </div>
   <!-- LOADER -->
 
@@ -33,19 +34,11 @@
   <div id="widget"></div>
   <div id="player"></div>
 
-  <!-- <div upload-widget title="{{videoTitle}}" description="{{videoDescription}}"></div> -->
   <div upload-widget></div>
 
 
   <div class="perspective" ng-show="processingVideoComplete">
     <button class="btn-next" ng-click="goStep3()">Share video</button>
   </div>
-
-<!--   <div ng-show="processingVideo && processingVideoComplete">
-    <span>Processing video, please do not leave this page.</span>
-    <div class="spinner"></div>
-  </div> -->
-  
-  
   
 </div>

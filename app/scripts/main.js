@@ -17,6 +17,7 @@ require('./lib/angular-google-gapi.js');
 require('./lib/firebase.js');
 require('./lib/angularfire.min.js');
 require('angularjs-toaster');
+require('ngstorage');
 
 // SOCIAL BUTTONS
 require('./social/twitter.js');
@@ -27,6 +28,7 @@ var app = angular.module('videoresume', [
   'angular-google-gapi', 
   // 'youtube-embed', 
   // 'angularify.semantic.dropdown'
+  'ngStorage',
   'ngRoute', 
   'ngAnimate', 
   'ui.router',

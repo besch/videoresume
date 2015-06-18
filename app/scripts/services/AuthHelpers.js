@@ -1,7 +1,7 @@
 
 
-module.exports = ['GData', 'GAuth', '$rootScope', '$state', 'constants', '$window', 
-  function (GData, GAuth, $rootScope, $state, constants, $window) {
+module.exports = ['GData', 'GAuth', '$rootScope', '$state', 'constants', '$window', '$sessionStorage',
+  function (GData, GAuth, $rootScope, $state, constants, $window, $sessionStorage) {
   
   var getUser = function () {
     $rootScope.user = GData.getUser();
@@ -25,8 +25,9 @@ module.exports = ['GData', 'GAuth', '$rootScope', '$state', 'constants', '$windo
   var buildUserUrl = function () {
     var url = constants.firebase;
     var ref = new Firebase(url);
+    // $rootScope.userRef = $sessionStorage.userRef = ref.child('users').child($rootScope.user.id);
     $rootScope.userRef = ref.child('users').child($rootScope.user.id);
-    $window.userRef = $rootScope.userRef; // for testing. REMOVE
+    // $window.userRef = $rootScope.userRef; // for testing. REMOVE
   }
   
   var login = function() {
