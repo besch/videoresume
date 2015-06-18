@@ -1,10 +1,9 @@
 
 /* form styling */
 #form-container          { 
-  // background-color: #84d54a; 
   padding: 20px;
   margin: 0 auto;
-  width: 65%;
+  max-width: 800px;
   margin-bottom: 80px;
     
   & h2 {
@@ -24,10 +23,7 @@
   
   .form-container-content {
     margin: 0 auto;
-    // background-color: #84d54a; 
     background-color: rgba(243,124,81,0.85);
-    // width: 80%;
-    width: 68%;
     border-top-left-radius: 3px;
     border-top-right-radius: 3px;
   }
@@ -99,7 +95,8 @@
 }
 #form-views             { 
   // width:auto; 
-  // width: 500px;
+  width: 100%;
+  text-align: center;
 }
 
 /* basic styling for entering and leaving */
@@ -175,13 +172,11 @@
   border-color: #CCCCCC;
   border-radius: 4px;
   border-style: solid;
-  // color: #222222;
   font-size: 12px;
   margin: 0px;
   background-color: #FFFFFF;
   padding: 20px;
   min-height: 300px; // needed for animation, change view
-  // max-width: 545px;
   width: 100%;
   position: relative;
   overflow: hidden;
@@ -230,14 +225,11 @@
   
   & section {
     padding: 20px;
-    // margin-bottom: 10px;
-    // background-color: #efefef;
   }
 
   & section.section-helper {
-    // border: 1px solid $global-border-focus-color;
-    // margin-bottom: 30px;
-    // padding: 30px;
-    // background-color: $global-background;
+    .content {
+      text-align: initial;
+    }
   }
 }
