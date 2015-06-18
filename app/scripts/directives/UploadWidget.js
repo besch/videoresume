@@ -77,9 +77,9 @@ module.exports = ['$window', 'GApi', '$rootScope', 'VideoService', 'constants', 
       function onUploadSuccess(event) {
         // console.log('Video ID ' + event.data.videoId + ' was uploaded and is currently being processed.');
         // console.log('video props', event.data)
-        // 
-        VideoService.addVideo(event.data.videoId, event.data.correlationId, title, description, category);
+
         $rootScope.processingVideo = true;
+        VideoService.addVideo(event.data.videoId, event.data.correlationId, title, description, category);
       };
 
       // 5. This function is called when a video has been successfully processed.

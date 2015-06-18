@@ -44,7 +44,6 @@ module.exports = ['GData', 'GAuth', '$rootScope', '$state', 'constants', '$windo
       // return state.go('login');
     })
     .then(function() {
-      console.log('fire')
       $state.go('form');
     })
   };
